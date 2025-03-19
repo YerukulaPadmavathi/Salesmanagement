@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+ <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block content %}
+{% if status %}
+    <!-- Admin Page UI -->
+    <div class="admin-page">
+      <h1>Welcome to the Admin Page, {{ existuser }}!</h1>
+      <img src="{% static 'images/img.png' %}" alt="Admin Image" class="admin-image">
+      <p>Here you can manage everything.</p>
+    </div>
+{% else %}
+    <div class="sales-page">
+      <h1>Welcome to the Sales Page, {{ existuser }}!</h1>
+      <img src="{% static 'images/img_1.png' %}" alt="Sales Image" class="sales-image">
+      <p>Start now your admissions</p>
+    </div>
+<!--image-->
+{% endif %}
+{% endblock %}
+
+

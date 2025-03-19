@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/display.css' %}">
+{% endblock %}
+{% block content %}
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      {% if status %}
+      <th scope="col">ID</th>
+      <th scope="col">COORDINATOR</th>
+      {% endif %}
+      <th scope="col">DATE OF ADMISSION</th>
+      <th scope="col">NAME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">AGE</th>
+      <th scope="col">PLACE</th>
+      <th scope="col">EDUCATION</th>
+      <th scope="col">SKILLS</th>
+      {% if status %}
+      <th scope="col">UPDATE</th>
+      <th scope="col">DELETE</th>
+      {% endif %}
+    </tr>
+  </thead>
+  <tbody>
+  {% for student in studentdata %}
+    <tr>
+      {% if status %}
+      <th scope="row">{{ student.id }}</th>
+      <td>{{ student.sales_person.username }}</td>
+      {% endif %}
+      <td>{{ student.date_of_join }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.place }}</td>
+      <td>{{ student.education }}</td>
+      <td>{{ student.skills }}</td>
+
+      {% if status %}
+      <td><a href="{% url 'update' student.id %}" class="button">update</a></td>
+      <td><a href="{% url 'delete' student.id %}" class="button1">delete</a></td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

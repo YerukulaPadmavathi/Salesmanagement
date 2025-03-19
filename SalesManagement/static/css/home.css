@@ -1,0 +1,51 @@
+/* Common Styles for Both Pages */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+/* Admin Page Styles */
+.admin-page {
+  background-color: #E0F780;
+  padding: 118px;
+  text-align: center;
+  margin-top:-20px;
+  margin-bottom:-5px;
+}
+
+.admin-page h1 {
+  color: #00695c;
+  font-size: 50px;
+}
+
+.admin-image {
+  width: 50%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Sales Page Styles */
+.sales-page {
+  background-color: #fff3e0;
+  padding: 30px;
+  text-align: center;
+}
+
+.sales-page h1 {
+  color: #ff5722;
+  font-size: 36px;
+}
+
+.sales-image {
+  width: 50%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
