@@ -5,9 +5,8 @@ A full-stack **Sales Management System** built using **Python and Django**. This
  📌 Features
 ✔️ Add, update, delete, and view sales recor
 ✔️ User authentication and authorization (Login/Logout)  
-✔️ Search & filter functionality for easy access  
-✔️ Responsive UI using Bootstrap/Tailwind  
-✔️ API endpoints for sales data (if applicable)  
+✔️ Search & filter functionality for easy access    
+✔️ API endpoints for sales data 
 ✔️ Export sales data as PDF 
 
 ## 🛠️ Tech Stack
@@ -22,10 +21,10 @@ pip install -r requirements.txt
 **Apply Migrations**
 python manage.py migrate
 
-**4Create a Superuser (For Admin Panel)** 
+**Create a Superuser (For Admin Panel)** 
 python manage.py createsuperuser
 
-5️**Run the Development Server**
+**Run the Development Server**
  python manage.py runserver
  
 Access the project at: http://127.0.0.1:8000/
